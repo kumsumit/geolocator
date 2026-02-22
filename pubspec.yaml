@@ -1,0 +1,51 @@
+name: geolocator
+description: Geolocation plugin for Flutter. This plugin provides a cross-platform (iOS, Android) API for generic location (GPS etc.) functions.
+repository: https://github.com/baseflow/flutter-geolocator/tree/main/geolocator
+issue_tracker: https://github.com/baseflow/flutter-geolocator/issues?q=is%3Aissue+is%3Aopen
+version: 14.0.2
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.41.0"
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: geolocator_android
+      ios:
+        default_package: geolocator_apple
+      macos:
+        default_package: geolocator_apple
+      web:
+        default_package: geolocator_web
+      windows:
+        default_package: geolocator_windows
+      linux:
+        default_package: geolocator_linux
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  geolocator_platform_interface:
+    git: https://github.com/kumsumit/geolocator_platform_interface.git
+  geolocator_android: 
+    git: https://github.com/kumsumit/geolocator_android.git  
+  geolocator_apple:
+    git: https://github.com/kumsumit/geolocator_apple.git
+  geolocator_web:
+    git: https://github.com/kumsumit/geolocator_web.git
+  geolocator_windows:
+    git: https://github.com/kumsumit/geolocator_windows.git
+  geolocator_linux:
+    git: https://github.com/kumsumit/geolocator_linux.git
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mockito: ^5.6.3
+  plugin_platform_interface:
+    git: https://github.com/kumsumit/plugin_platform_interface.git
